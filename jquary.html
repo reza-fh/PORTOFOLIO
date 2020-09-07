@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .header{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header"></div>
+
+    <button id="show">Tampil gambar</button>
+
+    <button id="hide">sembunyikan gambar</button>
+
+     <!-- elemen gambar -->
+
+    <div id="gambar">
+        <img id="load-gambar" src="image/jess.jpeg" alt="gambar" width: 200px;>
+    </div>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".header").html('bondowoso');
+            $(".header").click(function(){
+                $('.header').css({"border":"1px solid blue"});
+            })
+        });
+
+        //efek animasi
+
+        // $("#gambar").html("<img id='load-gambar'></img>");
+        // $("#show").click(function(){
+        // $('#load-gambar').attr({'src':'image/jess.jpeg',"width":"200px"});
+        // });
+        $("#load-gambar").hide();
+
+        $("#show").click(function(){
+            $('#load-gambar').fadeIn();
+        });
+        $("#hide").click(function(){
+            $("#load-gambar").fadeOut(3000);
+        });
+    </script>
+</body>
+</html>
